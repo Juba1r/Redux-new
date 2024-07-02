@@ -1,4 +1,5 @@
 const INCREMENT = 'INCREMENT';
+const INCREMENT_BY_VALUE = 'INCREMENT_BY_VALUE';
 const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';
 
@@ -15,6 +16,12 @@ const incrementCounterAction = () => {
 const decrementCounterAction = () => {
     return {
         type: DECREMENT,
+    };
+};
+
+const resetCounterAction = () => {
+    return {
+        type: RESET,
     };
 };
 
@@ -52,9 +59,3 @@ store.subscribe(() => {
     console.log(store.getState());
 });
 
-store.dispatch(incrementCounterAction());
-store.dispatch(incrementCounterAction());
-store.dispatch(incrementCounterAction());
-store.dispatch(decrementCounterAction());
-store.dispatch(resetCounterAction());
-store.dispatch(incrementCounterAction());
